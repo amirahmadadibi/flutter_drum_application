@@ -44,15 +44,13 @@ Widget getBody() {
             Expanded(
                 child: TextButton(
                     onPressed: () {
-                      var player = AudioCache();
-                      player.play('h1.wav');
+                      playSound('h1.wav');
                     },
                     child: Text(''))),
             Expanded(
               child: TextButton(
                 onPressed: () {
-                  var player = AudioCache();
-                  player.play('h2.wav');
+                  playSound('h2.wav');
                 },
                 child: Text(''),
               ),
@@ -67,8 +65,7 @@ Widget getBody() {
             Expanded(
               child: TextButton(
                 onPressed: () {
-                  var player = AudioCache();
-                  player.play('c1.wav');
+                  playSound('c1.wav');
                 },
                 child: Text(''),
               ),
@@ -76,8 +73,7 @@ Widget getBody() {
             Expanded(
               child: TextButton(
                 onPressed: () {
-                  var player = AudioCache();
-                  player.play('c2.wav');
+                  playSound('c2.wav');
                 },
                 child: Text(''),
               ),
@@ -92,8 +88,7 @@ Widget getBody() {
             Expanded(
               child: TextButton(
                 onPressed: () {
-                  var player = AudioCache();
-                  player.play('k1.wav');
+                  playSound('k1.wav');
                 },
                 child: Text(''),
               ),
@@ -101,8 +96,7 @@ Widget getBody() {
             Expanded(
               child: TextButton(
                 onPressed: () {
-                  var player = AudioCache();
-                  player.play('k2.wav');
+                  playSound('k2.wav');
                 },
                 child: Text(''),
               ),
@@ -112,4 +106,9 @@ Widget getBody() {
       )
     ],
   );
+}
+
+playSound(String sound) {
+  var player = AudioCache();
+  player.play(sound);
 }
