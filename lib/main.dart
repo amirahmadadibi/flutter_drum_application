@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:audioplayers/audioplayers.dart';
 
 void main() {
   runApp(Application());
@@ -26,11 +27,49 @@ Widget getApplication() {
               fit: BoxFit.fitWidth,
             ),
           ),
-          child: Center(
-            child: Text('AmirahmadAdibi'),
-          ),
+          child: getBody(),
         ),
       ),
     ),
+  );
+}
+
+Widget getBody() {
+  return Column(
+    children: [
+      Expanded(
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Expanded(
+                child: TextButton(
+                    onPressed: () {
+                      var player = AudioCache();
+                      player.play('h1.wav');
+                    },
+                    child: Text(''))),
+            Expanded(child: TextButton(onPressed: () {}, child: Text('')))
+          ],
+        ),
+      ),
+      Expanded(
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Expanded(child: TextButton(onPressed: () {}, child: Text(''))),
+            Expanded(child: TextButton(onPressed: () {}, child: Text('')))
+          ],
+        ),
+      ),
+      Expanded(
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Expanded(child: TextButton(onPressed: () {}, child: Text(''))),
+            Expanded(child: TextButton(onPressed: () {}, child: Text('')))
+          ],
+        ),
+      )
+    ],
   );
 }
