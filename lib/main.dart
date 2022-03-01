@@ -48,7 +48,15 @@ Widget getBody() {
                       player.play('h1.wav');
                     },
                     child: Text(''))),
-            Expanded(child: TextButton(onPressed: () {}, child: Text('')))
+            Expanded(
+              child: TextButton(
+                onPressed: () {
+                  var player = AudioCache();
+                  player.play('h2.wav');
+                },
+                child: Text(''),
+              ),
+            )
           ],
         ),
       ),
@@ -56,8 +64,24 @@ Widget getBody() {
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Expanded(child: TextButton(onPressed: () {}, child: Text(''))),
-            Expanded(child: TextButton(onPressed: () {}, child: Text('')))
+            Expanded(
+              child: TextButton(
+                onPressed: () {
+                  var player = AudioCache();
+                  player.play('c1.wav');
+                },
+                child: Text(''),
+              ),
+            ),
+            Expanded(
+              child: TextButton(
+                onPressed: () {
+                  var player = AudioCache();
+                  player.play('c2.wav');
+                },
+                child: Text(''),
+              ),
+            )
           ],
         ),
       ),
@@ -65,8 +89,24 @@ Widget getBody() {
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Expanded(child: TextButton(onPressed: () {}, child: Text(''))),
-            Expanded(child: TextButton(onPressed: () {}, child: Text('')))
+            Expanded(
+              child: TextButton(
+                onPressed: () {
+                  var player = AudioCache();
+                  player.play('k1.wav');
+                },
+                child: Text(''),
+              ),
+            ),
+            Expanded(
+              child: TextButton(
+                onPressed: () {
+                  var player = AudioCache();
+                  player.play('k2.wav');
+                },
+                child: Text(''),
+              ),
+            )
           ],
         ),
       )
